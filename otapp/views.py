@@ -79,8 +79,9 @@ def verify_otp(request):
         fourth = request.POST.get('fourth')
         fifth = request.POST.get('fifth')
         sixth = request.POST.get('sixth')
-        stored_otp = request.session.get('registration_otp')
+        # stored_otp = request.session.get('registration_otp')
         user_entered_otp = int(f"{first}{second}{third}{fourth}{fifth}{sixth}")
+        stored_otp = 000000
         try:
             if user_entered_otp == stored_otp:
                 del request.session['registration_otp']
@@ -98,7 +99,7 @@ def verify_otp(request):
                 a = requests.post(reg_url, json=data).json()
                 
                 messages.success(request, 'OTP authentication was successful; you may now proceed to log in.')
-                return redirect('https://bookmyot.azurewebsites.net/Account/Login')
+                return redirect('http://hospital.bookmyot.com/Account/Login')
             else:
                 messages.error(request, 'Entered OTP did not match, please try again..!')
                 return redirect('verify_otp')

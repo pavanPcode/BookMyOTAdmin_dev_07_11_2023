@@ -30,6 +30,7 @@
     <script src="{% static 'book/assets/js/site.js' %}" asp-append-version="true"></script>
     <script src="{% static 'book/assets/js/bookmyot.js' %}"></script>
     <link href="{% static 'book/assets/lib/custom/datatables/datatables.bundle.js' %}">
+    
 </head>
 
 <body id="kt_app_body" data-kt-app-header-fixed-mobile="true" data-kt-app-toolbar-enabled="true" class="app-default">
@@ -155,7 +156,7 @@
                                 </div>
                                 <div b-1mtsuay2f9 class="{% if request.path == '/surgeries-list' %}menu-item here show menu-here-bg menu-lg-down-accordion me-0 me-lg-2{% else %}menu-item menu-lg-down-accordion me-0 me-lg-2{% endif %}">
                                     <a b-1mtsuay2f9 href="{% url 'surgeries_list' %}" class="menu-link">
-                                        <span b-1mtsuay2f9 class="menu-icon-danger">
+                                        <span b-1mtsuay2f9 class="menu-icon-danger" >
                                             <i b-1mtsuay2f9 class="bi bi-heart-pulse"></i>
                                         </span>
                                         <span b-1mtsuay2f9 class="menu-title">Surgeries</span>
